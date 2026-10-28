@@ -1,2 +1,2 @@
 # portcheck
-verification on SSH
+connectivity-checks
