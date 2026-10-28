@@ -1,11 +1,7 @@
 #!/usr/bin/env bash
 # sshcheck.sh - connects to a server over SSH (key authentication only)
 # and prints a quick health report: hostname, uptime, disk and memory.
-#
-# Usage:   ./sshcheck.sh <user@host> [port] [identity_file]
-# Example: ./sshcheck.sh mateus@192.168.0.10
-#          ./sshcheck.sh mateus@192.168.0.10 2222 ~/.ssh/id_ed25519
-# Exit codes: 0 = ok, 1 = connection/auth failed, 2 = invalid usage
+
 
 set -u
 
@@ -26,9 +22,9 @@ fi
 
 ssh_opts=(
     -p "$port"
-    -o BatchMode=yes                    # never ask for a password: key auth only
-    -o ConnectTimeout=5                 # give up quickly if the host is down
-    -o StrictHostKeyChecking=accept-new # trust a new host once, warn if it changes later
+    -o BatchMode=yes                    
+    -o ConnectTimeout=5                 
+    -o StrictHostKeyChecking=accept-new 
     -o PasswordAuthentication=no
 )
 
