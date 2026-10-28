@@ -37,12 +37,4 @@ Both tools exit with `0` on success, `1` on failure and `2` on invalid usage, so
 - The same tool in a shell script and in a compiled language
 - Reading error messages and fixing edge cases (for example, invalid ports and timeouts)
 
-## Limitations
 
-- `portcheck` only checks that a connection opens; it doesn't verify that the service behind the port works. TCP only, no UDP.
-- The report in `sshcheck` uses `uptime -p` and `free`, so it targets Linux servers.
-
-## Author
-
-Mateus Vinicios, Computer Science student focused on infrastructure, networking and support.
-GitHub: [@MattsVini](https://github.com/MattsVini)
