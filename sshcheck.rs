@@ -37,7 +37,7 @@ fn main() {
 
     let mut cmd = Command::new("ssh");
     cmd.arg("-p").arg(port.to_string())
-        .args(["-o", "BatchMode=yes"]) // never ask for a password: key auth only
+        .args(["-o", "BatchMode=yes"]) 
         .args(["-o", "ConnectTimeout=5"])
         .args(["-o", "StrictHostKeyChecking=accept-new"])
         .args(["-o", "PasswordAuthentication=no"]);
